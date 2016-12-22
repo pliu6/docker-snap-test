@@ -1,6 +1,6 @@
 # Steps to reproduce the problem
 
-1. Build the dockertest snap with snapcraft (On development machine)
+1. Build the dockertest snap with snapcraft (On development machine Ubuntu 16.04 LTS)
 
 2. Test the snap on the machine with all-snap image
 ```
