@@ -18,7 +18,7 @@ Test steps
 snap install docker --devmode
 
 #install the test snap
-snap install dockertest_0.0.1_amd64.snap
+snap install dockertest_0.0.1_amd64.snap --devmode
 
 #pull the nginx image
 sudo docker pull nginx:latest
