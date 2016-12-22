@@ -1,0 +1,29 @@
+name: dockertest
+version: '0.0.1'
+summary: A snap to test docker snap
+description: |
+  A test snap used to reproduce a kernel panic issue of all-snap amd64 image
+
+grade: devel
+confinement: devmode
+
+apps:
+  dockertest:
+    command: dockertest
+    plugs:
+      - network-control
+
+parts:
+  dockertest:
+    plugin: python
+    python-version: python2
+    source: src
+
+  pipework:
+    plugin: dump
+    source: https://github.com/jpetazzo/pipework
+    source-type: git
+    organize:
+      pipework: usr/bin/pipework
+    snap:
+      - usr/bin/pipework
