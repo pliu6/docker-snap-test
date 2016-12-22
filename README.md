@@ -1,21 +1,27 @@
-== Steps to reproduce the problem ==
+# Steps to reproduce the problem
 
-# install docker snap
+1. Build the dockertest snap with snapcraft (On development machine)
+
+2. Test the snap on the machine with all-snap image
+```
+#install docker snap
 snap install docker --devmode
 
-# install the test snap
+#install the test snap
 snap install dockertest_0.0.1_amd64.snap
 
-# pull the nginx image
+#pull the nginx image
 sudo docker pull nginx:latest
 
-# run the script to setup virtual Wi-Fi network interface
+#run the script to setup virtual Wi-Fi network interface
 sudo sh ./prepare.sh
 
-# Run the test snap
+#Run the test snap
 sudo dockertest
+```
 
 #################################
+```
 Kernel panic
 
 [  504.783341] BUG: unable to handle kernel paging request at fffffffffffffff3
@@ -65,4 +71,4 @@ Kernel panic
 [  508.624889]  RSP <ffff880061a73a20>
 [  508.666696] CR2: fffffffffffffff3
 [  508.706425] ---[ end trace 9a8196367a1a3630 ]---
-
+```
