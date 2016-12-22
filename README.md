@@ -2,7 +2,7 @@
 
 1. Build the dockertest snap with snapcraft (On development machine Ubuntu 16.04 LTS)
 
-2. Test the snap on the machine with all-snap image (16.04 amd64)
+2. Test the snap on the machine with all-snap image (16.04 amd64). The machine must have a wi-fi device.
 ```
 #install docker snap
 snap install docker --devmode
