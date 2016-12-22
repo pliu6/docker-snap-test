@@ -4,6 +4,16 @@
 
 2. Test the snap on the machine with all-snap image (16.04 amd64). The machine must have a Wi-Fi device and must be reboot before the test.
 ```
+#snap list
+Name             Version     Rev  Developer  Notes
+core             16.04.1     714  canonical  -
+docker           1.11.2-9    56   canonical  devmode
+dockertest       0.0.1       x12             devmode
+pc               16.04-0.8   9    canonical  -
+pc-kernel        4.4.0-53-2  51   canonical  -
+```
+Test steps
+```
 #install docker snap
 snap install docker --devmode
 
